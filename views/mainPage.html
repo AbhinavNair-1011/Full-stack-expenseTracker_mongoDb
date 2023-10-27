@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Hanalei Fill' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Hanalei' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <script>
+        if(!sessionStorage.getItem("loggedin")){
+  window.location.href="../../views/index.html";
+}
+    </script>
+</head>
+
+<body>
+    <header id="headingTag">
+        <div id="headingDiv" class="container-xxl">
+            <h1 id="heading">EXPENSE TRACKER</h1>
+        </div>
+        
+    </header>
+    <main id="main">
+        <div class="profile">
+            <p id="userName" style="visibility:hidden">Welcome abhinav </p>
+           <div id="premiumWrap">
+            <button id="razorPay" style="display:none">Buy Premium Membership</button>
+            <button id="logout" style="display:none">Logout</button>
+        </div>
+            <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        </div>
+        <div class="premiumMember" id="premiumMember" style="visibility:hidden">
+            <p id="premiumMemberP">You are a premium member</p>
+            <div id="buttonWrap">
+            <button id="expenseReport">Expense Report</button>
+            <button id="leaderBoard">Leaderboard</button>
+        </div>
+        </div>
+        <div id="leaderBoardDiv">
+            <button id="closeLeaderboard" style="float:right">X</button>
+            <table id="table">
+                <thead id="tableHead">
+                    <tr id="headingRow">
+                        <td id="name">NAME</td>
+                        <td id="amount">AMOUNT</td>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                  
+                </tbody>
+            </table>
+        </div>
+        <section id="inputSectionTag">
+            <div id="inputSectionDiv" class="container-sm">
+                <form action="" id="inputForm">
+
+
+                    <div class="row">
+                        <label class="form-label" id="expenseLabel" for="expenseInput">Expense Item  : <input validate class="form-control" id="expenseInput"
+                                placeholder="Expense For?" type="text"><label>
+
+                    </div>
+                    <div class="row">
+                        <label class="form-label" id="expenseLabel2" for="expensePrice">Expense Price : <input type="number"
+                                id="expensePrice" class="form-control" placeholder="Expense price?"></label>
+                    </div>
+                    <div>
+                        <div id="submitDiv" class="row">
+                            
+                            <input type="submit" name="submit" id="submitBtn" value="Submit" >
+                    
+                        </div>
+
+                    </div>
+                   <!-- <div class="deleteAll">
+                    <button class="deleteBtn">Delete All</button>
+                   </div> -->
+                </form>
+
+            </div>
+
+        </section>
+        <div class="container-md p-0">
+        <input type="text" id="search" class="form-control" placeholder="SEARCH YOUR EXPENSE HERE">
+    </div>
+        <section id="detailSectionTag" >
+            <div id="rowsWrap">
+                <p id="rowParagraph">Rows per page :</p>
+            <select name="rows" id="rows">
+                <option value="5">5</option>
+                <option value="10"selected>10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+            </select>
+        </div>
+
+            <div id="detailsSectionDiv" class="container-fluid">
+
+                <ol id="detailsList" >
+<li class="total"></li>
+
+                </ol>
+               
+            </div>
+        </section>
+
+    </main>
+    
+    <script src="/public/js/mainPageDom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

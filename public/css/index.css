@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(5, 0, 0);
+  font-weight: bolder;
+}
+
+h1 {
+  color: rgb(15, 252, 240);
+  text-align: center;
+  font-size: 3.3em;
+  margin: 10px;
+  padding: 10px;
+  text-shadow: 1px 4px 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 16px;
+}
+
+#mainDiv {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+#registerLogin {
+  align-self: center;
+  box-shadow: 0 0 4px black;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 1px 4px 1px black;
+}
+
+.registerLoginButton {
+  background-color: rgb(15, 252, 240);
+  border-radius: 30px 0;
+  width: 180px;
+  height: 30px;
+  box-shadow: 0 0 4px 0 black;
+  border: 0.5;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+.registerLoginButton:hover {
+  box-shadow: 0 0 7px rgb(15, 252, 240);
+}
+#registerShift {
+  border-radius: 0 30px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+#forms {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  /* width:100%; */
+}
+#forgotPassword{
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+#cancelOtp{
+  width: 260px;
+height: 25px;
+border-radius: 30px 0;
+padding-left: 10px;
+background-color: rgba(0, 255, 255, 0.465);
+font-size: 14px;
+}
+#forgotPasswordForm{
+  background-color: rgba(4, 221, 241, 0.625);
+  padding: 10px;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  width: 500px;
+  box-shadow: 0 0 4px 0 black;
+  transition: opacity 0.13s ease-in;
+  min-width: 200px;
+  min-height: 286px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+#forgotPasswordWrap{
+  justify-content: center;
+}
+#registerForm {
+  background-color: rgba(4, 221, 241, 0.625);
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  width: 500px;
+  box-shadow: 0 0 4px 0 black;
+  transition: opacity 0.13s ease-in;
+  min-width: 200px;
+}
+
+#registerForm:hover,#forgotPasswordForm:hover {
+  box-shadow: 0 0 10px 2px rgb(15, 252, 240);
+}
+
+#loginForm {
+  background-color: rgba(4, 221, 241, 0.625);
+  padding: 10px;
+  position: absolute;
+  width: 500px;
+  min-height: 286px;
+  z-index: 0;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 4px 0 black;
+  transition: opacity 0.13s ease-in;
+}
+
+#loginForm:hover {
+  box-shadow: 0 0 10px 2px rgb(15, 252, 240);
+}
+
+.inputWrap {
+  padding: 8px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(6, 240, 228, 0.11);
+  border-radius: 30px 0;
+}
+
+.inputWrap:hover {
+  box-shadow: 0 0 3px 1px rgb(15, 252, 240);
+}
+
+#register:hover {
+  box-shadow: 0 0 3px rgb(15, 252, 240);
+}
+#forgotPasswordOtp{
+  padding-right:15px
+}
+
+
+
+#loginSubmitWrap,
+#registerSubmitWrap {
+  justify-content: center;
+  background-color: rgba(77, 231, 180, 0.199) !important;
+}
+
+#registerSubmitWrap:hover,
+#loginSubmitWrap:hover {
+  box-shadow: 0 0 0 rgba(0, 0, 255, 0.274);
+}
+
+label {
+  font-size: 0.95em;
+  color: white;
+}
+
+input {
+  width: 260px;
+  height: 25px;
+  border-radius: 30px 0;
+  padding-left: 10px;
+  background-color: rgba(0, 255, 255, 0.465);
+  font-size: 14px;
+}
+
+#register {
+  width: 40%;
+  height: 30px;
+  background-color: rgba(240, 248, 255, 0.575);
+}
+
+#login {
+  width: 40%;
+  height: 30px;
+  background-color: rgba(240, 248, 255, 0.575);
+}
+#forgotPassword{  
+    /* width: 100%; */
+    text-align: end;
+    padding-right: 35px
+}
+
+#loginShift:active {
+  background-color: rgb(197, 196, 130);
+}
+
+#registerShift:active {
+  background-color: rgb(197, 196, 130);
+}
+
+#register:active {
+  background-color: rgb(197, 196, 130);
+}
+
+#login:active {
+  background-color: rgb(197, 196, 130);
+}
+
+.duplicateEntry {
+  color: #fffb06;
+  font-size: 14px;
+  min-width: 400px;
+  text-align: start;
+  padding-left: 210px;
+  margin-top: -11px;
+  margin-bottom: -10px;
+  font-weight: lighter;
+}
+
+.loginDuplicateEntry {
+  color: #fffb06;
+  font-size: 14px;
+  width: 150px;
+  text-align: start;
+  padding-left: 55px;
+  margin-top: -11px;
+  margin-bottom: -10px;
+  align-self: center;
+  font-weight: lighter;
+}
+
+
+@media (max-width: 540px) {
+  #mainDiv {
+    margin-top: 50px;
+  }
+  #expenseReport{
+    height:10px;
+  }
+  
+
+  h1 {
+    font-size: 3em;
+  }
+
+  #registerLogin {
+    width: 80%;
+  }
+
+  .registerLoginButton {
+    width: 35%;
+  }
+#forgot{
+  font-size: 13px;
+}
+#cancelOtp{
+  font-size: 13px;
+}
+  #loginForm {
+    width: 90%;
+  }
+
+  #registerForm {
+    width: 90%;
+  }
+  label {
+    max-width: 100px;
+    text-align: center;
+  }
+
+  .duplicateEntry {
+    color: red;
+    font-size: 14px;
+    width: 440px;
+    text-align: start;
+    padding-left: 190px;
+    margin-top: -11px;
+    margin-bottom: -10px;
+  }
+  #forgotPasswordForm{
+    width: 90%;
+  }
+}
+
+@media (max-width: 390px) {
+  h1 {
+    font-size: 2.5em;
+    letter-spacing:10px ;
+  }
+
+  .inputWrap {
+    font-size: 0.8em;
+  }
+
+  input {
+    overflow-x: hidden;
+  }
+  label {
+    max-width: 65px;
+  }
+
+  .duplicateEntry {
+    color: red;
+    font-size: 14px;
+    min-width: 400px;
+    text-align: start;
+    padding-left: 100px;
+    margin-top: -11px;
+    margin-bottom: -10px;
+  }
+}

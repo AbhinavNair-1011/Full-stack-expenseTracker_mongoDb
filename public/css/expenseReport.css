@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+ 
+  
+  body {
+    background-color: rgb(5, 0, 0);
+    font-weight: bolder;
+    display:flex;
+    flex-direction: column;
+  }
+  h1 {
+    color: rgb(15, 252, 240);
+    text-align: center;
+    font-size: 1.8em;
+    margin-top: 40px;
+    text-shadow: 1px 4px 10px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    letter-spacing: 5px;
+  }
+  #heading{
+    color: rgb(15, 252, 240);
+    text-align: center;
+    font-size: 2.5em;
+    margin: 10px;
+    padding: 10px;
+    text-shadow: 1px 4px 10px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    letter-spacing: 5px;
+
+  }
+  #monthLabel{
+    color: wheat;
+    font-size: 16.8px;
+  }
+  #date{
+    width:200px;
+  }
+  #expenseItem{
+    width:660px
+  }
+  
+ #selectMonth{
+    background-color: wheat;
+    font-size: 13px;
+    width:100px;
+    text-align: center;
+    font-weight: bold;
+ }
+  #dateForm{
+    margin:26px;
+  }
+  #monthName{
+    color: rgb(15, 252, 240);
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 1px 4px 10px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    letter-spacing: 4px;
+    
+  }
+  #mainPage{
+    width: 100px;
+    height:25px;
+    background-color: rgb(72, 216, 216);
+    font-weight: bold;
+  }
+  #logout{
+    background-color: red;
+  color:white;
+    height:25px;
+    width:100px;
+    font-weight: bold;
+  }
+  .table{
+    width:83%;
+    align-self: center;
+    border-collapse: collapse;
+
+  }
+  #monthlyExpense{
+    width:90%;
+  }
+  
+  th,td{
+    border:1px solid rgb(0, 0, 0);
+  }
+  th{
+    
+    background-color: #4e8cce;
+    border: 2px solid black;
+    height:33px;
+    font-size: 18px;
+    font-family:monospace;
+    font-weight: bolder;
+      }
+  td{
+    text-align: center;
+    height:23px;
+    font-size: 15px;
+    
+  }
+  tr{
+         background-color: #33d1c4;
+         margin:3px
+
+  }
+  #totalRow{
+    background-color: #ccccea;
+    height:30px;
+  }
+  #wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  tr:hover{
+    background-color: #71c1ba;
+    height:28px;
+  
+  }
+  .circle{
+    width:60px;
+    height:60px;
+    background-color: #1da6a6;
+    border-radius:50%;
+  /* position: relative; */
+left:20px;
+  top:60px;
+  cursor:pointer;
+  margin: 10px;
+  }
+  .wrap{
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding:30px;
+  }
+  .line1,.line2,.line3{
+
+ background-color: white;
+
+  }
+  .line1{
+transform:translate(9.5px,38.5px ) rotate(45deg);  
+width:25px;
+height:4px; 
+  }
+  .line2{
+    transform:translate(24px,34px )    rotate(130deg);
+    width:25px;
+    height:4px;
+  }
+  .line3{
+  transform:translate(12px,19px)rotate(90deg);
+  height:4px;
+  width:35px;
+               
+  }
+
+  @media(max-width:500px){
+    th{
+      font-size: 17px;
+
+    }
+    td{    
+      font-size: 14px;
+
+
+    }
+    #monthlyExpense{
+      width:100%;
+    }
+    #heading{
+      font-size: 2em;
+   
+    }
+    #dateForm{
+      margin-left:0 !important;
+    }
+    #buttonWrap{
+  width:100px
+    }
+  }
+
+  

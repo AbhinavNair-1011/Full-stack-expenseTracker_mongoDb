@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../public/js/expenseReport.js"></script>
+    <link rel="stylesheet" href="../public//css/expenseReport.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>if(!sessionStorage.getItem("loggedin")){
+        window.location.href="../../views/index.html";
+        
+      }</script>
+    <title>Expense tracker</title>
+    
+</head>
+<body>
+    <h1 id="heading">DAY TO DAY EXPENSE REPORT</h1>
+    <div id="wrap">
+        <form action="" id="dateForm">
+            <label for="selectMonth" id="monthLabel">Select month :</label>
+            <select name="selectMonth" id="selectMonth" >
+                <option disabled selected>Month</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            
+        </form>
+        <div id="buttonWrap">
+        <button id="mainPage">Main Page</button>
+        <button id="logout">Logout</button>
+    </div>
+    
+    
+</div>
+<p id="monthName">MONTH</p>
+    <table id="monthlyExpense" class="table">
+      
+        <thead id="monthlyTableHead" class="tableHead">
+          <tr class="tableHeadRow" id="monthlytableRow">
+            <th id="date">Date</th>
+            <th id="expenseItem">Expense Item</th>
+            <th id="expensePrice">Expense Price</th>
+          </tr>
+        </thead>
+        <tbody class="tableBody" id="monthlyTableBody">
+      
+            <tr id="noExpensesRow">
+                <td>---</td>
+                <td>*Select month to view expenses*</td>
+                <td>-------</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    
+    <h1 id="yearlyReport">YEARLY REPORT</h1>
+    <table id="yearlyExpense" class="table">
+      
+        <thead id="yearlyTableHead" class="tableHead">
+          <tr class="tableHeadRow" id="yearlytableRow">
+            <th id="monthTab" >Month</th>
+            <th id="MonthlyExpenseTab">Monthly Expense</th>
+            
+          </tr>
+        </thead>
+        <tbody class="tableBody" id="yearlytableBody">
+            <tr>
+                <td id="january">January</td>                
+                <td id="januaryAmount">0</td>
+            </tr>
+            <tr>
+                <td id="february">February</td>
+                <td id="februaryAmount">0</td>
+            </tr>
+            <tr>
+                <td id="march">March</td>
+                <td id="marchAmount">0</td>
+            </tr>
+            <tr>
+                <td id="april">April</td>
+                <td id="aprilAmount">0</td>
+            </tr>
+            <tr>
+                <td id="may">May</td>
+                <td id="mayAmount">0</td>
+            </tr>
+            <tr>
+                <td id="june">June</td>
+                <td id="juneAmount">0</td>
+            </tr>
+            <tr>
+                <td id="july">July</td>
+                <td id="julyAmount">0</td>
+            </tr>
+            <tr>
+                <td id="august">August</td>
+                <td id="augustAmount">0</td>
+            </tr>
+            <tr>
+                <td id="september">September</td>
+                <td id="septemberAmount">0</td>
+            </tr>
+            <tr>
+                <td id="october">October</td>
+                <td id="octoberAmount">0</td>
+            </tr>
+            <tr>
+                <td id="november">November</td>
+                <td id="novemberAmount">0</td>
+            </tr>
+            <tr>
+                <td id="december">December</td>
+                <td id="decemberAmount">0</td>
+            </tr>
+            <tr id="totalRow">
+                <td id="total">TOTAL</td>
+                <td id="totalAmount">0</td>
+            </tr>
+
+  
+        </tbody>
+
+    </table>
+
+    <div class="wrap">
+        <p style="color:white;text-align: center;">Download disabled for now</p>
+    <div class="circle">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</div>
+ 
+
+</body>
+</html>
